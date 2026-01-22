@@ -48,7 +48,7 @@ const ownerContact = {
   name: "Rana Aqib Ranjput",
   position: "Founder & CEO",
   bio: "Rana Aqib Ranjput is the founder and CEO of DigitalRank Agency. With years of hands-on experience in digital marketing, he has helped brands scale their online presence through data-driven strategies, performance marketing, and growth-focused solutions. His vision is to empower businesses with sustainable digital success.",
-  phone: "+92 3XX XXX XXXX", // replace with real number
+  phone: "+92 3162123698", // replace with real number
   email: "ranaaqib@digitalrankagency.com", // replace if needed
   social: {
     facebook: "https://facebook.com/ranaaqibranjput",
@@ -60,11 +60,11 @@ const ownerContact = {
 
 
   const agencyContact = {
-    phone: "+1 (555) 987-6543",
+    phone: "+92 3700267484",
     email: "hello@digitalrank.com",
     address: "123 Marketing Street, Digital City, DC 12345",
     social: {
-      facebook: "https://facebook.com/digitalrank",
+      facebook: "https://web.facebook.com/profile.php?id=61585651601202&sk=about",
       linkedin: "https://linkedin.com/company/digitalrank",
       instagram: "https://instagram.com/digitalrank"
     }
