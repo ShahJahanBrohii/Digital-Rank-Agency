@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, Target, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Search, Target, TrendingUp, CheckCircle2, ArrowRight, Code } from 'lucide-react';
 
 const Services = () => {
   const [activeService, setActiveService] = useState(null);
@@ -10,13 +10,13 @@ const Services = () => {
       icon: Search,
       title: "SEO Excellence",
       description: "Dominate search rankings with data-driven strategies that convert organic traffic into revenue.",
-      features: ["Technical SEO Audits", "Content Optimization", "Link Building", "Local SEO"],
+      features: ["Technical SEO Audits", "Link Building", "Local SEO", "On/Off-page SEO"],
       gradient: "from-cyan-500/20 to-blue-600/20"
     },
     {
       icon: Target,
       title: "Google Ads",
-      description: "Precision-targeted campaigns that maximize ROI and minimize wasted ad spend.",
+      description: "Precision-targeted campaigns that maximize ROI and minimize wasted ad spend while driving consistent, high-quality traffic.", 
       features: ["Search Campaigns", "Display Advertising", "Shopping Ads", "Remarketing"],
       gradient: "from-blue-500/20 to-indigo-600/20"
     },
@@ -26,6 +26,13 @@ const Services = () => {
       description: "Transform social platforms into revenue engines with compelling creative and strategic targeting.",
       features: ["Facebook Ads", "Instagram Campaigns", "LinkedIn B2B", "TikTok Advertising"],
       gradient: "from-indigo-500/20 to-purple-600/20"
+    },
+    {
+      icon: Code,
+      title: "Website Development",
+      description: "Build stunning, high-performance websites that convert visitors into customers.",
+      features: ["Custom Web Design", "Responsive Development", "E-commerce Solutions", "Performance Optimization"],
+      gradient: "from-purple-500/20 to-pink-600/20"
     }
   ];
 
@@ -50,7 +57,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
