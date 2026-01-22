@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Zap } from 'lucide-react';
 import "tailwindcss";
+
 const Navbar = () => {
+  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navItems = ['Services', 'Case Studies', 'Contact'];
+  const navItems = ['Services', 'Case Studies', 'Contact','About'];
 
   return (
     <motion.header 

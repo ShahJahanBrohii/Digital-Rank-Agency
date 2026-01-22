@@ -5,7 +5,8 @@ import Services from './components/Services';
 import Stats from './components/Stats';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
-// import BackgroundEffects from './components/BackgroundEffects';
+import About from './components/About';
+
 
 const LandingPage = () => {
   return (
@@ -17,6 +18,7 @@ const LandingPage = () => {
           <Services />
           <Stats />
           <ContactForm />
+          <About />
         </main>
         <Footer />
     </div>
