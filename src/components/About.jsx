@@ -17,6 +17,7 @@ import {
 import profileImg from "../images/profile.webp";
 
 
+
 const About = () => {
   const agencyStats = [
     { icon: Users, label: "Team Members", value: "25+" },
@@ -43,19 +44,20 @@ const About = () => {
     }
   ];
 
-  const ownerContact = {
-    name: "John Anderson",
-    position: "Founder & CEO",
-    bio: "With over a decade of experience in digital marketing, John has helped hundreds of businesses transform their online presence and achieve sustainable growth. His data-driven approach and passion for client success have made DigitalRank a trusted partner for businesses worldwide.",
-    phone: "+1 (555) 123-4567",
-    email: "john@digitalrank.com",
-    social: {
-      facebook: "https://facebook.com/johndoe",
-      linkedin: "https://linkedin.com/in/johndoe",
-      instagram: "https://instagram.com/johndoe"
-    },
-    image: profileImg // Replace with actual image path
-  };
+const ownerContact = {
+  name: "Rana Aqib Ranjput",
+  position: "Founder & CEO",
+  bio: "Rana Aqib Ranjput is the founder and CEO of DigitalRank Agency. With years of hands-on experience in digital marketing, he has helped brands scale their online presence through data-driven strategies, performance marketing, and growth-focused solutions. His vision is to empower businesses with sustainable digital success.",
+  phone: "+92 3XX XXX XXXX", // replace with real number
+  email: "ranaaqib@digitalrankagency.com", // replace if needed
+  social: {
+    facebook: "https://facebook.com/ranaaqibranjput",
+    linkedin: "https://linkedin.com/in/ranaaqibranjput",
+    instagram: "https://instagram.com/ranaaqibranjput"
+  },
+  image: "/profile.webp"
+};
+
 
   const agencyContact = {
     phone: "+1 (555) 987-6543",
@@ -248,11 +250,19 @@ const About = () => {
                       {ownerContact.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     {/* Uncomment when you have an image */}
-                    {/* <img 
-                      src={ownerContact.image} 
-                      alt={ownerContact.name}
-                      className="w-full h-full object-cover"
-                    /> */}
+                   <img
+  src={ownerContact.image}
+  alt={ownerContact.name}
+  className="w-full h-full object-cover"
+  onError={(e) => {
+    e.target.style.display = "none";
+    e.target.nextSibling.style.display = "flex";
+  }}
+/>
+
+
+
+
                   </div>
                 </div>
               </div>
