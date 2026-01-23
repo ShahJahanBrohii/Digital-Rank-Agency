@@ -14,7 +14,8 @@ import {
   Clock,
   Shield
 } from 'lucide-react';
-import profileImg from "../images/profile.webp";
+
+import profileImg from "../images/profile.jpeg";
 
 
 
@@ -45,17 +46,17 @@ const About = () => {
   ];
 
 const ownerContact = {
-  name: "Rana Aqib Ranjput",
+  name: "Rana Aqib Rajput",
   position: "Founder & CEO",
   bio: "Rana Aqib Ranjput is the founder and CEO of DigitalRank Agency. With years of hands-on experience in digital marketing, he has helped brands scale their online presence through data-driven strategies, performance marketing, and growth-focused solutions. His vision is to empower businesses with sustainable digital success.",
-  phone: "+92 3162123698", // replace with real number
-  email: "ranaaqib@digitalrankagency.com", // replace if needed
+  phone: "+92 3162123698", 
+  email: "ranaaqib@digitalrankagency.com", 
   social: {
     facebook: "https://facebook.com/ranaaqibranjput",
     linkedin: "https://linkedin.com/in/ranaaqibranjput",
     instagram: "https://instagram.com/ranaaqibranjput"
   },
-  image: "/profile.webp"
+  image: profileImg
 };
 
 
@@ -246,21 +247,25 @@ const ownerContact = {
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-cyan-500/30 rounded-2xl blur-2xl" />
                   <div className="relative w-64 h-64 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-2xl border-2 border-zinc-700/50 overflow-hidden">
                     {/* Replace with actual image */}
-                    <div className="w-full h-full flex items-center justify-center text-6xl font-bold text-zinc-600">
-                      {ownerContact.name.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    {/* Uncomment when you have an image */}
-                   <img
-  src={ownerContact.image}
-  alt={ownerContact.name}
-  className="w-full h-full object-cover"
-  onError={(e) => {
-    e.target.style.display = "none";
-    e.target.nextSibling.style.display = "flex";
-  }}
-/>
+                   <div className="relative w-64 h-64 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-2xl border-2 border-zinc-700/50 overflow-hidden flex items-center justify-center">
 
+  {!ownerContact.image ? (
+    <div className="text-6xl font-bold text-zinc-600">
+      {ownerContact.name.split(' ').map(n => n[0]).join('')}
+    </div>
+  ) : (
+    <img
+      src={ownerContact.image}
+      alt={ownerContact.name}
+      className="w-full h-full object-cover"
+      loading="lazy"
+      onError={(e) => {
+        e.currentTarget.style.display = "none";
+      }}
+    />
+  )}
 
+</div>
 
 
                   </div>
