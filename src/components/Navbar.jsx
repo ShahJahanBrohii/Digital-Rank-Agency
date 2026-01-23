@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Zap } from 'lucide-react';
-import "tailwindcss";
 
 const Navbar = () => {
-  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = ['Services', 'Case Studies', 'Contact','About'];
@@ -29,7 +27,7 @@ const Navbar = () => {
               </div>
             </div>
             <span className="text-2xl font-bold tracking-tight">
-              Digital<span className="text-blue-500">Rank</span>
+              Apex<span className="text-blue-500">Digital</span>
             </span>
           </motion.div>
 
@@ -48,7 +46,8 @@ const Navbar = () => {
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
-            <motion.button
+            <motion.a
+              href="#contact"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.05 }}
@@ -56,7 +55,7 @@ const Navbar = () => {
               className="px-6 py-2.5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/50 transition-all"
             >
               Get Free Audit
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -86,9 +85,13 @@ const Navbar = () => {
                 {item}
               </a>
             ))}
-            <button className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl">
+            <a 
+              href="#contact"
+              className="w-full mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl block text-center"
+              onClick={() => setMobileMenuOpen(false)}
+            >
               Get Free Audit
-            </button>
+            </a>
           </motion.div>
         )}
       </nav>
